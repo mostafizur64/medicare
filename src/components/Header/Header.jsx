@@ -14,16 +14,19 @@ const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const handleStickyHeader = () => {
-    window.addEventListener("scroll", () => {
-      if (
-        document.body.scrollTop > 80 ||
-        document.documentElement.scrollTop > 80
-      ) {
-        headerRef.current.classList.add("sticky_header");
-      } else {
-        headerRef.current.classList.remove("sticky_header");
-      }
-    });
+    const headerElement = headerRef.current;
+    if (headerElement) {
+      window.addEventListener("scroll", () => {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          headerElement.classList.add("sticky_header");
+        } else {
+          headerElement.classList.remove("sticky_header");
+        }
+      });
+    }
   };
   useEffect(() => {
     handleStickyHeader();
