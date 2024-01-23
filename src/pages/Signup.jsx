@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import signupImg from "../assets/images/signup.gif";
 import avatar from "../assets/images/doctor-img01.png";
@@ -5,9 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 import uploadImageToCloudinary from "../utils/uploadCloudinary";
 import { BASE_URL } from "../config";
 import { toast } from "react-toastify";
-import { HashLoader } from "react-spinners/HashLoader";
+import HashLoader  from "react-spinners/HashLoader";
 const Signup = () => {
-
+  
   const navigate = useNavigate();
 
   const [selectedFile, setSelectedFile] = useState(null);
@@ -174,9 +175,7 @@ const Signup = () => {
                   className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg  py-3"
                 >
                   {loading ? (
-                    // <HashLoader size={35} color="#ffffff" />
-                   ' loading.....................'
-
+                    <HashLoader size={35} color="#ffffff" />
                   ) : (
                     "Sign Up"
                   )}

@@ -51,7 +51,7 @@ const Footer = () => {
             <img src={logo} alt="logo" />
             <p className="text-[16px] leading-7 font-[400] text-textColor mt-4">
               Copyright @ {year} development by Mostafizur Rahman all right
-              reservedF
+              reserved 
             </p>
             <div className="flex items-center gap-3 mt-4">
               {socialLinks.map((item, index) => (
